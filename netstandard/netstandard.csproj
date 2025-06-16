@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <AssemblyName>netstandard</AssemblyName>
+        <TargetFrameworks>netstandard2.0;netstandard2.1</TargetFrameworks>
+        <AssemblyVersion Condition="'$(TargetFramework)' == 'netstandard2.0'">2.0.0.0</AssemblyVersion>
+        <AssemblyVersion Condition="'$(TargetFramework)' == 'netstandard2.1'">2.1.0.0</AssemblyVersion>
+        <IsCoreAssembly>true</IsCoreAssembly>
+        <AssemblyOriginatorKeyFile>Open.snk</AssemblyOriginatorKeyFile>
+        <SignAssembly>true</SignAssembly>
+        <PublicSign>true</PublicSign>
+        <!-- disable obsolete warnings/errors -->
+        <NoWarn>$(NoWarn);0618;0619;0809</NoWarn>
+        <!-- disable unused field warnings/errors -->
+        <NoWarn>$(NoWarn);0169;0649</NoWarn>
+        <!-- disable CLS compliance warnings/errors -->
+        <NoWarn>$(NoWarn);3021</NoWarn>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <!-- Mark netstandard as a framework assembly -->
+        <AssemblyMetadata Include=".NETFrameworkAssembly" Value="" />
+    </ItemGroup>
+</Project>

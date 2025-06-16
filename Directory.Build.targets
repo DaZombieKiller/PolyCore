@@ -1,0 +1,6 @@
+<Project>
+    <PropertyGroup>
+        <!-- Pass RuntimeMetadataVersion to the compiler for all Core Assemblies -->
+        <RuntimeMetadataVersion Condition="'$(IsCoreAssembly)' == 'true'">v4.0.30319</RuntimeMetadataVersion>
+    </PropertyGroup>
+</Project>

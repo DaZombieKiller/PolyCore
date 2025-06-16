@@ -1,0 +1,17 @@
+<Project>
+    <PropertyGroup>
+        <LangVersion>preview</LangVersion>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+        <UseArtifactsOutput>true</UseArtifactsOutput>
+        <NoStdLib>true</NoStdLib>
+        <NoExplicitReferenceToStdLib>true</NoExplicitReferenceToStdLib>
+        <AddAdditionalExplicitAssemblyReferences>false</AddAdditionalExplicitAssemblyReferences>
+        <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
+        <DisableImplicitFrameworkReferences>true</DisableImplicitFrameworkReferences>
+        <DisableStandardFrameworkResolution>true</DisableStandardFrameworkResolution>
+        <WarningLevel>4</WarningLevel>
+        <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+        <NoWarn>$(NoWarn);8500</NoWarn>
+        <DefineConstants>$(DefineConstants);EXPOSE_IMPLEMENTATION_DETAILS</DefineConstants>
+    </PropertyGroup>
+</Project>
