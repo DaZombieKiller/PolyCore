@@ -1,5 +1,7 @@
 ﻿using System.ComponentModel;
 
+namespace @implicit;
+
 [EditorBrowsable(EditorBrowsableState.Never)]
 public static class _System_Array
 {

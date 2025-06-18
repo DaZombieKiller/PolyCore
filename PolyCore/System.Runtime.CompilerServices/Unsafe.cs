@@ -1,6 +1,8 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
+namespace @implicit;
+
 [EditorBrowsable(EditorBrowsableState.Never)]
 public static class _System_Runtime_CompilerServices_Unsafe
 {

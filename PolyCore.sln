@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PolyCore", "PolyCore\PolyCo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "netstandard", "netstandard\netstandard.csproj", "{1BB42DFE-C1FE-4E61-966D-61AAFFECCA96}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PolyCore.SourceGenerators", "PolyCore.SourceGenerators\PolyCore.SourceGenerators.csproj", "{27B8952A-CF2E-45F8-B6B7-B3279E1D4963}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +43,18 @@ Global
 		{1BB42DFE-C1FE-4E61-966D-61AAFFECCA96}.Release|x64.Build.0 = Release|Any CPU
 		{1BB42DFE-C1FE-4E61-966D-61AAFFECCA96}.Release|x86.ActiveCfg = Release|Any CPU
 		{1BB42DFE-C1FE-4E61-966D-61AAFFECCA96}.Release|x86.Build.0 = Release|Any CPU
+		{27B8952A-CF2E-45F8-B6B7-B3279E1D4963}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27B8952A-CF2E-45F8-B6B7-B3279E1D4963}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27B8952A-CF2E-45F8-B6B7-B3279E1D4963}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{27B8952A-CF2E-45F8-B6B7-B3279E1D4963}.Debug|x64.Build.0 = Debug|Any CPU
+		{27B8952A-CF2E-45F8-B6B7-B3279E1D4963}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{27B8952A-CF2E-45F8-B6B7-B3279E1D4963}.Debug|x86.Build.0 = Debug|Any CPU
+		{27B8952A-CF2E-45F8-B6B7-B3279E1D4963}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27B8952A-CF2E-45F8-B6B7-B3279E1D4963}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27B8952A-CF2E-45F8-B6B7-B3279E1D4963}.Release|x64.ActiveCfg = Release|Any CPU
+		{27B8952A-CF2E-45F8-B6B7-B3279E1D4963}.Release|x64.Build.0 = Release|Any CPU
+		{27B8952A-CF2E-45F8-B6B7-B3279E1D4963}.Release|x86.ActiveCfg = Release|Any CPU
+		{27B8952A-CF2E-45F8-B6B7-B3279E1D4963}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

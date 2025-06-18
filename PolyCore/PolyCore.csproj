@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
+    <Import Project="..\NoStdLib.props" />
     <PropertyGroup>
-        <RootNamespace></RootNamespace>
         <TargetFrameworks>netstandard2.0;netstandard2.1</TargetFrameworks>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>

@@ -2,6 +2,8 @@
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
+namespace @implicit;
+
 [EditorBrowsable(EditorBrowsableState.Never)]
 public static class _System_Runtime_InteropServices_MemoryMarshal
 {

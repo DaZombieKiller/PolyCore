@@ -1,0 +1,9 @@
+<Project>
+    <PropertyGroup>
+        <NoStdLib>true</NoStdLib>
+        <NoExplicitReferenceToStdLib>true</NoExplicitReferenceToStdLib>
+        <AddAdditionalExplicitAssemblyReferences>false</AddAdditionalExplicitAssemblyReferences>
+        <DisableImplicitFrameworkReferences>true</DisableImplicitFrameworkReferences>
+        <DisableStandardFrameworkResolution>true</DisableStandardFrameworkResolution>
+    </PropertyGroup>
+</Project>

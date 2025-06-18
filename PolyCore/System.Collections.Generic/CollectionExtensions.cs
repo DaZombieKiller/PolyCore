@@ -185,25 +185,28 @@ namespace System.Collections.Generic
 }
 
 #if NETSTANDARD2_1_OR_GREATER
-[EditorBrowsable(EditorBrowsableState.Never)]
-public static class _System_Collections_Generic_CollectionExtensions
+namespace @implicit
 {
-    extension(CollectionExtensions)
+    [EditorBrowsable(EditorBrowsableState.Never)]
+    public static class _System_Collections_Generic_CollectionExtensions
     {
-        /// <inheritdoc cref="_CollectionExtensions.AddRange{T}(List{T}, ReadOnlySpan{T})"/>
-        public static void AddRange<T>(List<T> list, ReadOnlySpan<T> items) => _CollectionExtensions.AddRange(list, items);
+        extension(CollectionExtensions)
+        {
+            /// <inheritdoc cref="_CollectionExtensions.AddRange{T}(List{T}, ReadOnlySpan{T})"/>
+            public static void AddRange<T>(List<T> list, ReadOnlySpan<T> items) => _CollectionExtensions.AddRange(list, items);
 
-        /// <inheritdoc cref="_CollectionExtensions.InsertRange{T}(List{T}, int, ReadOnlySpan{T})"/>
-        public static void InsertRange<T>(List<T> list, int index, scoped ReadOnlySpan<T> source) => _CollectionExtensions.InsertRange(list, index, source);
+            /// <inheritdoc cref="_CollectionExtensions.InsertRange{T}(List{T}, int, ReadOnlySpan{T})"/>
+            public static void InsertRange<T>(List<T> list, int index, scoped ReadOnlySpan<T> source) => _CollectionExtensions.InsertRange(list, index, source);
 
-        /// <inheritdoc cref="_CollectionExtensions.CopyTo{T}(List{T}, Span{T})"/>
-        public static void CopyTo<T>(List<T> list, Span<T> destination) => _CollectionExtensions.CopyTo(list, destination);
+            /// <inheritdoc cref="_CollectionExtensions.CopyTo{T}(List{T}, Span{T})"/>
+            public static void CopyTo<T>(List<T> list, Span<T> destination) => _CollectionExtensions.CopyTo(list, destination);
 
-        /// <inheritdoc cref="_CollectionExtensions.AsReadOnly{T}(IList{T})"/>
-        public static ReadOnlyCollection<T> AsReadOnly<T>(IList<T> list) => _CollectionExtensions.AsReadOnly(list);
+            /// <inheritdoc cref="_CollectionExtensions.AsReadOnly{T}(IList{T})"/>
+            public static ReadOnlyCollection<T> AsReadOnly<T>(IList<T> list) => _CollectionExtensions.AsReadOnly(list);
 
-        /// <inheritdoc cref="_CollectionExtensions.AsReadOnly{TKey, TValue}(IDictionary{TKey, TValue})"/>
-        public static ReadOnlyDictionary<TKey, TValue> AsReadOnly<TKey, TValue>(IDictionary<TKey, TValue> dictionary) where TKey : notnull => _CollectionExtensions.AsReadOnly(dictionary);
+            /// <inheritdoc cref="_CollectionExtensions.AsReadOnly{TKey, TValue}(IDictionary{TKey, TValue})"/>
+            public static ReadOnlyDictionary<TKey, TValue> AsReadOnly<TKey, TValue>(IDictionary<TKey, TValue> dictionary) where TKey : notnull => _CollectionExtensions.AsReadOnly(dictionary);
+        }
     }
 }
 #endif
