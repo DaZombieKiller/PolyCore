@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace @implicit;
+namespace PolyCore.Internal;
 
 [EditorBrowsable(EditorBrowsableState.Never)]
 public static class _System_Runtime_CompilerServices_Unsafe

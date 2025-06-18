@@ -13,7 +13,7 @@ public sealed class GlobalUsingGenerator : IIncrementalGenerator
         {
             context.AddSource("PolyCore.GlobalUsings.g.cs", SourceText.From(
                 """
-                global using @implicit;
+                global using PolyCore.Internal;
                 """, Encoding.UTF8));
         });
     }

@@ -185,7 +185,7 @@ namespace System.Collections.Generic
 }
 
 #if NETSTANDARD2_1_OR_GREATER
-namespace @implicit
+namespace PolyCore.Internal
 {
     [EditorBrowsable(EditorBrowsableState.Never)]
     public static class _System_Collections_Generic_CollectionExtensions

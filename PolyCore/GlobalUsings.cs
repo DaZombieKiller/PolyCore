@@ -1,2 +1,2 @@
-﻿// Import PolyCore implicit extension namespace
-global using @implicit;
+﻿// Import PolyCore internal extension namespace
+global using PolyCore.Internal;

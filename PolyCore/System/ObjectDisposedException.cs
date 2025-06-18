@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Diagnostics.CodeAnalysis;
 
-namespace @implicit;
+namespace PolyCore.Internal;
 
 [EditorBrowsable(EditorBrowsableState.Never)]
 public static class _System_ObjectDisposedException

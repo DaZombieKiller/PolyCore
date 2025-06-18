@@ -9,7 +9,7 @@ namespace System.Linq
     }
 }
 
-namespace @implicit
+namespace PolyCore.Internal
 {
     [EditorBrowsable(EditorBrowsableState.Never)]
     public static class _System_Linq_Enumerable

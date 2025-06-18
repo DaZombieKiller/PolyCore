@@ -4,7 +4,7 @@ using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.Serialization;
 
-namespace @implicit;
+namespace PolyCore.Internal;
 
 [EditorBrowsable(EditorBrowsableState.Never)]
 public static class _System_Runtime_CompilerServices_RuntimeHelpers
