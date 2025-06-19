@@ -61,6 +61,8 @@ internal static class SR
 
     public const string Argument_InvalidTypeWithPointersNotSupported = "Cannot use type '{0}'. Only value types without pointers or references are supported.";
 
+    public const string Argument_MinMaxValue = "'{0}' cannot be greater than {1}.";
+
     public const string ArgumentOutOfRange_NeedNonNegNum = "Non-negative number required.";
 
     public const string ArgumentOutOfRange_IndexMustBeLessOrEqual = "Index was out of range. Must be non-negative and less than or equal to the size of the collection.";
