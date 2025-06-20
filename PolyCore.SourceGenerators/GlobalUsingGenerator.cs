@@ -14,6 +14,7 @@ public sealed class GlobalUsingGenerator : IIncrementalGenerator
             context.AddSource("PolyCore.GlobalUsings.g.cs", SourceText.From(
                 """
                 global using PolyCore.Internal;
+                namespace PolyCore.Internal {}
                 """, Encoding.UTF8));
         });
     }
