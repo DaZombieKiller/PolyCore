@@ -5,7 +5,7 @@
         <UseArtifactsOutput>true</UseArtifactsOutput>
         <WarningLevel>4</WarningLevel>
         <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-        <NoWarn>$(NoWarn);8500;IDE0130;IDE1006</NoWarn>
+        <NoWarn>$(NoWarn);1573;1591;8500;IDE0130;IDE1006</NoWarn>
         <DefineConstants>$(DefineConstants);EXPOSE_IMPLEMENTATION_DETAILS</DefineConstants>
     </PropertyGroup>
 </Project>
