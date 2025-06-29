@@ -77,6 +77,12 @@ internal static class ThrowHelper
         throw new InvalidOperationException(SR.InvalidOperation_EnumOpCantHappen);
     }
 
+    [DoesNotReturn]
+    public static void ThrowOutOfMemoryException_StringTooLong()
+    {
+        throw new OutOfMemoryException(SR.OutOfMemory_StringTooLong);
+    }
+
     private static string GetResourceString(ExceptionResource resource)
     {
         switch (resource)
@@ -126,6 +132,8 @@ internal static class SR
 
     public const string InvalidOperation_EnumOpCantHappen = "Enumeration has either not started or has already finished.";
 
+    public const string OutOfMemory_StringTooLong = "String length exceeded supported range.";
+
     public static string Format(string resourceFormat, object? p1) => string.Format(resourceFormat, p1);
 
     public static string Format(string resourceFormat, object? p1, object? p2) => string.Format(resourceFormat, p1, p2);
@@ -137,6 +145,8 @@ internal static class SR
 
 internal static class ExceptionArgument
 {
+    public const string action = nameof(action);
+
     public const string array = nameof(array);
 
     public const string length = nameof(length);
