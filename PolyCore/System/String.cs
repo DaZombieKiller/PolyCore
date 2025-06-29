@@ -15,6 +15,21 @@ public static class _System_String
 
         internal static int StackallocCharBufferSizeLimit => 256;
 
+        /// <summary>Creates a new string by using the specified provider to control the formatting of the specified interpolated string.</summary>
+        /// <param name="provider">An object that supplies culture-specific formatting information.</param>
+        /// <param name="handler">The interpolated string.</param>
+        /// <returns>The string that results for formatting the interpolated string using the specified format provider.</returns>
+        public static string Create(IFormatProvider? provider, [InterpolatedStringHandlerArgument(nameof(provider))] ref DefaultInterpolatedStringHandler handler) =>
+            handler.ToStringAndClear();
+
+        /// <summary>Creates a new string by using the specified provider to control the formatting of the specified interpolated string.</summary>
+        /// <param name="provider">An object that supplies culture-specific formatting information.</param>
+        /// <param name="initialBuffer">The initial buffer that may be used as temporary space as part of the formatting operation. The contents of this buffer may be overwritten.</param>
+        /// <param name="handler">The interpolated string.</param>
+        /// <returns>The string that results for formatting the interpolated string using the specified format provider.</returns>
+        public static string Create(IFormatProvider? provider, Span<char> initialBuffer, [InterpolatedStringHandlerArgument(nameof(provider), nameof(initialBuffer))] ref DefaultInterpolatedStringHandler handler) =>
+            handler.ToStringAndClear();
+
         /// <summary>Copies the contents of this string into the destination span.</summary>
         /// <param name="destination">The span into which to copy this string's contents.</param>
         /// <exception cref="ArgumentException">The destination span is shorter than the source string.</exception>
