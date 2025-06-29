@@ -328,6 +328,16 @@ namespace System.Text
     }
     public sealed partial class StringBuilder : System.Runtime.Serialization.ISerializable
     {
+#if EXPOSE_IMPLEMENTATION_DETAILS
+        public char[] m_ChunkChars;
+        public int m_ChunkLength;
+        public int m_ChunkOffset;
+        public StringBuilder m_ChunkPrevious;
+        public int m_MaxCapacity;
+#if NETSTANDARD2_1_OR_GREATER
+        public Span<char> RemainingCurrentChunk { get { throw null; } }
+#endif
+#endif
         public StringBuilder() { }
         public StringBuilder(int capacity) { }
         public StringBuilder(int capacity, int maxCapacity) { }

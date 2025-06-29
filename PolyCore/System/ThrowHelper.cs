@@ -60,9 +60,21 @@ internal static class ThrowHelper
     }
 
     [DoesNotReturn]
+    public static void ThrowFormatInvalidString()
+    {
+        throw new FormatException(SR.Format_InvalidString);
+    }
+
+    [DoesNotReturn]
     public static void ThrowFormatInvalidString(int offset, ExceptionResource resource)
     {
         throw new FormatException(SR.Format(SR.Format_InvalidStringWithOffsetAndReason, offset, GetResourceString(resource)));
+    }
+
+    [DoesNotReturn]
+    public static void ThrowInvalidOperationException_InvalidOperation_EnumOpCantHappen()
+    {
+        throw new InvalidOperationException(SR.InvalidOperation_EnumOpCantHappen);
     }
 
     private static string GetResourceString(ExceptionResource resource)
@@ -102,6 +114,8 @@ internal static class SR
 
     public const string Format_IndexOutOfRange = "Index (zero based) must be greater than or equal to zero and less than the size of the argument list.";
 
+    public const string Format_InvalidString = "Input string was not in a correct format.";
+
     public const string Format_InvalidStringWithOffsetAndReason = "Input string was not in a correct format. Failure to parse near offset {0}. {1}";
 
     public const string Format_UnexpectedClosingBrace = "Unexpected closing brace without a corresponding opening brace.";
@@ -109,6 +123,8 @@ internal static class SR
     public const string Format_UnclosedFormatItem = "Format item ends prematurely.";
 
     public const string Format_ExpectedAsciiDigit = "Expected an ASCII digit.";
+
+    public const string InvalidOperation_EnumOpCantHappen = "Enumeration has either not started or has already finished.";
 
     public static string Format(string resourceFormat, object? p1) => string.Format(resourceFormat, p1);
 
