@@ -529,7 +529,7 @@ namespace System.Runtime.CompilerServices
             Debug.Assert(provider is not null);
             Debug.Assert(provider is not CultureInfo || provider.GetFormat(typeof(ICustomFormatter)) is null, "Expected CultureInfo to not provide a custom formatter");
             return
-                provider!.GetType() != typeof(CultureInfo) && // optimization to avoid GetFormat in the majority case
+                provider.GetType() != typeof(CultureInfo) && // optimization to avoid GetFormat in the majority case
                 provider.GetFormat(typeof(ICustomFormatter)) != null;
         }
 
@@ -547,7 +547,7 @@ namespace System.Runtime.CompilerServices
             Debug.Assert(_hasCustomFormatter);
             Debug.Assert(_provider != null);
 
-            ICustomFormatter? formatter = (ICustomFormatter?)_provider!.GetFormat(typeof(ICustomFormatter));
+            ICustomFormatter? formatter = (ICustomFormatter?)_provider.GetFormat(typeof(ICustomFormatter));
             Debug.Assert(formatter != null, "An incorrectly written provider said it implemented ICustomFormatter, and then didn't");
 
             if (formatter is not null && formatter.Format(format, value, _provider) is string customFormatted)

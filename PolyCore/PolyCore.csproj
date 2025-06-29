@@ -3,7 +3,8 @@
     <PropertyGroup>
         <TargetFrameworks>netstandard2.0;netstandard2.1</TargetFrameworks>
         <ImplicitUsings>enable</ImplicitUsings>
-        <Nullable>enable</Nullable>
+        <Nullable Condition="'$(TargetFramework)' == 'netstandard2.0'">annotations</Nullable>
+        <Nullable Condition="'$(TargetFramework)' != 'netstandard2.0'">enable</Nullable>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
     </PropertyGroup>
 

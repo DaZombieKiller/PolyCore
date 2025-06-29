@@ -85,7 +85,7 @@ namespace System.Collections.Generic
 
             if (!source.IsEmpty)
             {
-                if (list!._items.Length - list._size < source.Length)
+                if (list._items.Length - list._size < source.Length)
                 {
                     Grow(list, checked(list._size + source.Length));
                 }

@@ -9,7 +9,6 @@ public static class _System_ArgumentException
 {
     extension(ArgumentException)
     {
-#pragma warning disable 8777
         /// <summary>Throws an exception if <paramref name="argument"/> is null or empty.</summary>
         /// <param name="argument">The string argument to validate as non-null and non-empty.</param>
         /// <param name="paramName">The name of the parameter with which <paramref name="argument"/> corresponds.</param>
@@ -35,7 +34,6 @@ public static class _System_ArgumentException
                 ThrowNullOrWhiteSpaceException(argument, paramName);
             }
         }
-#pragma warning restore 8777
     }
 
     [DoesNotReturn]
