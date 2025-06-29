@@ -8,6 +8,7 @@
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
         <PolySharpIncludeRuntimeSupportedAttributes>true</PolySharpIncludeRuntimeSupportedAttributes>
         <PolySharpUsePublicAccessibilityForGeneratedTypes>true</PolySharpUsePublicAccessibilityForGeneratedTypes>
+        <DefineConstants>$(DefineConstants);SYSTEM_PRIVATE_CORELIB</DefineConstants>
     </PropertyGroup>
 
     <ItemGroup>
