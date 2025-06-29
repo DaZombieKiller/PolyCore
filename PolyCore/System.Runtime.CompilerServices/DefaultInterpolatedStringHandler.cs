@@ -653,8 +653,7 @@ namespace System.Runtime.CompilerServices
             // ints that could technically overflow if someone tried to, for example, append a huge string to a huge string, we also clamp to int.MaxValue.
             // Even if the array creation fails in such a case, we may later fail in ToStringAndClear.
 
-            const int MaxStringLength = 0x3FFFFFDF;
-            uint newCapacity = Math.Max(requiredMinCapacity, Math.Min((uint)_chars.Length * 2, MaxStringLength));
+            uint newCapacity = Math.Max(requiredMinCapacity, Math.Min((uint)_chars.Length * 2, (uint)string.MaxLength));
             int arraySize = (int)Math.Clamp(newCapacity, MinimumArrayPoolLength, int.MaxValue);
 
             char[] newArray = ArrayPool<char>.Shared.Rent(arraySize);
