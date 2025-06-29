@@ -6,6 +6,8 @@
         <Nullable Condition="'$(TargetFramework)' == 'netstandard2.0'">annotations</Nullable>
         <Nullable Condition="'$(TargetFramework)' != 'netstandard2.0'">enable</Nullable>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <PolySharpIncludeRuntimeSupportedAttributes>true</PolySharpIncludeRuntimeSupportedAttributes>
+        <PolySharpUsePublicAccessibilityForGeneratedTypes>true</PolySharpUsePublicAccessibilityForGeneratedTypes>
     </PropertyGroup>
 
     <ItemGroup>
