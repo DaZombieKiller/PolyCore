@@ -873,7 +873,11 @@ namespace System.Runtime.InteropServices
         protected virtual void Dispose(bool disposing) { }
         ~SafeHandle() { }
         protected abstract bool ReleaseHandle();
+#if EXPOSE_IMPLEMENTATION_DETAILS
+        public void SetHandle(System.IntPtr handle) { }
+#else
         protected void SetHandle(System.IntPtr handle) { }
+#endif
         public void SetHandleAsInvalid() { }
     }
     public partial class SEHException : System.Runtime.InteropServices.ExternalException
