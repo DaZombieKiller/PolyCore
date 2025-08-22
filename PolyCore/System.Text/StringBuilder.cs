@@ -55,24 +55,40 @@ public static partial class _System_Text_StringBuilder
         /// <summary>Appends the specified interpolated string to this instance.</summary>
         /// <param name="handler">The interpolated string to append.</param>
         /// <returns>A reference to this instance after the append operation has completed.</returns>
-        public StringBuilder Append([InterpolatedStringHandlerArgument("")] ref AppendInterpolatedStringHandler handler) => @this;
+        public StringBuilder Append(
+#if STRINGBUILDER_INTERPOLATEDSTRINGS
+            [InterpolatedStringHandlerArgument("")]
+#endif
+            ref AppendInterpolatedStringHandler handler) => @this;
 
         /// <summary>Appends the specified interpolated string to this instance.</summary>
         /// <param name="provider">An object that supplies culture-specific formatting information.</param>
         /// <param name="handler">The interpolated string to append.</param>
         /// <returns>A reference to this instance after the append operation has completed.</returns>
-        public StringBuilder Append(IFormatProvider? provider, [InterpolatedStringHandlerArgument("", nameof(provider))] ref AppendInterpolatedStringHandler handler) => @this;
+        public StringBuilder Append(IFormatProvider? provider,
+#if STRINGBUILDER_INTERPOLATEDSTRINGS
+            [InterpolatedStringHandlerArgument("", nameof(provider))]
+#endif
+            ref AppendInterpolatedStringHandler handler) => @this;
 
         /// <summary>Appends the specified interpolated string followed by the default line terminator to the end of the current StringBuilder object.</summary>
         /// <param name="handler">The interpolated string to append.</param>
         /// <returns>A reference to this instance after the append operation has completed.</returns>
-        public StringBuilder AppendLine([InterpolatedStringHandlerArgument("")] ref AppendInterpolatedStringHandler handler) => @this.AppendLine();
+        public StringBuilder AppendLine(
+#if STRINGBUILDER_INTERPOLATEDSTRINGS
+            [InterpolatedStringHandlerArgument("")]
+#endif
+            ref AppendInterpolatedStringHandler handler) => @this.AppendLine();
 
         /// <summary>Appends the specified interpolated string followed by the default line terminator to the end of the current StringBuilder object.</summary>
         /// <param name="provider">An object that supplies culture-specific formatting information.</param>
         /// <param name="handler">The interpolated string to append.</param>
         /// <returns>A reference to this instance after the append operation has completed.</returns>
-        public StringBuilder AppendLine(IFormatProvider? provider, [InterpolatedStringHandlerArgument("", nameof(provider))] ref AppendInterpolatedStringHandler handler) => @this.AppendLine();
+        public StringBuilder AppendLine(IFormatProvider? provider,
+#if STRINGBUILDER_INTERPOLATEDSTRINGS
+            [InterpolatedStringHandlerArgument("", nameof(provider))]
+#endif
+            ref AppendInterpolatedStringHandler handler) => @this.AppendLine();
 
         /// <summary>
         /// Concatenates the string representations of the elements in the provided span of objects, using the specified char separator between each member,
@@ -509,9 +525,9 @@ public static partial class _System_Text_StringBuilder
 
         private StringBuilder Append(ref char value, int valueCount)
         {
-        #if NETSTANDARD2_1_OR_GREATER
+#if NETSTANDARD2_1_OR_GREATER
             return @this.Append(MemoryMarshal.CreateSpan(ref value, valueCount));
-        #else
+#else
             unsafe
             {
                 fixed (char* pValue = &value)
@@ -519,7 +535,7 @@ public static partial class _System_Text_StringBuilder
                     return @this.Append(pValue, valueCount);
                 }
             }
-        #endif
+#endif
         }
     }
 
